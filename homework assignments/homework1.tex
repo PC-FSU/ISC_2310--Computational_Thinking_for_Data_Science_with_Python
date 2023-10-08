@@ -1,0 +1,114 @@
+ \documentclass{article}
+
+\usepackage{amsmath,amsfonts,amssymb}
+ 
+\usepackage{graphicx}
+\usepackage{ pstricks,pst-grad  }
+\usepackage{wrapfig}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+ 
+\usepackage{color}
+\usepackage{epstopdf}
+\usepackage{framed}
+ 
+
+ %  TikZ & PGF Libraries
+\usepackage{tikz}
+\usepackage{animate}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.pathmorphing,patterns}
+\usepackage{calc}
+
+
+ \input  {./macros_1057.tex}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\textheight=9in
+\textwidth=6.5in
+\oddsidemargin = 0.15 in
+\evensidemargin = 0.15 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+\hfuzz=20pt
+\overfullrule=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\pagestyle{empty}
+
+ \sffamily
+\bcenter
+{\large  \bf Homework 1 - Knapsack Problem } \medskip
+\ecenter
+
+\vskip.25in
+\hrule \smallskip \hrule
+\medskip
+Suppose you have five items with a total weight of 100 lbs that you want to ship via  USPS in a box.  However, the maximum allowable weight for domestic shipping is 70 lbs so clearly you can't ship them all in one box.   You can only afford to ship one box so you want to determine which are the best items to ship.  
+Assume you have assigned a value to each item.  The weight in pounds and value of each item is listed in the table below.
+
+\bcenter
+\begin{tabular}{|| c | c| c||}
+\hline \hline
+{\bf Item} & {\bf Value} & {\bf Weight} \cr \hline
+A & 12 & 16 \cr
+B & 10 & 20 \cr
+C & 15 & 25 \cr
+D & 16 & 30 \cr
+E & 9 & 9\cr
+\hline\hline
+\end{tabular}
+\ecenter
+\bigskip
+
+\hrule
+\bigskip
+\benum
+\item Obtain a solution to this problem using the Greedy Algorithm where the criteria for choosing the next item is the one with the highest value.   
+\benum
+\item List  the items  in order from highest to lowest value.
+\item Go through 5 loops of the algorithm where you consider an item and decide whether or not to add the item to the box or discard it.
+Tabulate your results in a table like the one below.
+\bcenter
+\begin{tabular}{|| c | c| c|c|c| c|c|c||}
+\hline \hline
+{\bf Loop} &{\bf Item to}   & {\bf Item  }& {\bf Item } & {\bf Action} &{\bf Items  } &{\bf Current weight of  } &{\bf Current value of}\cr 
+&{\bf check}&{\bf Weigh}t &{\bf Value} &(add or discard) &{\bf in Box}&{\bf items in box}&{\bf items in box}\cr\hline
+1 & D  & 30 &16&&&& \cr \hline\hline
+\end{tabular}
+\ecenter
+
+\eenum 
+\vskip.25in
+  \hrule
+
+\item Obtain a solution to this problem using the Greedy Algorithm where the criteria for choosing the next item is the one with the highest  value to weight ratio.   
+
+\benum
+\item First determine the ratio of value/weight  for each item and them list them in order from highest to lowest ratios.
+\item Go through 5 loops of the algorithm where you consider an item and decide whether or not to add the item to the box or discard it.
+Tabulate your results in a table like the one from part (1.)
+\item Compare results with (1.)
+
+\eenum 
+\eenum 
+
+ 
+\bigskip\hrule \smallskip \hrule
+\bigskip
+
+ 
+
+
+
+\end{document}
+

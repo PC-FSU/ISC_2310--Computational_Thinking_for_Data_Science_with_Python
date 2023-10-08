@@ -1,0 +1,89 @@
+\documentclass{article}
+
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[landscape]{geometry}
+\usepackage{graphicx}
+\usepackage{ pstricks,pst-grad  }
+\usepackage{wrapfig}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+ 
+\usepackage{color}
+\usepackage{epstopdf}
+\usepackage{framed}
+ 
+
+ %  TikZ & PGF Libraries
+\usepackage{tikz}
+\usepackage{animate}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.pathmorphing,patterns}
+\usepackage{calc}
+ 
+
+ \input  {macros_1057.tex}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\textheight=6.5in
+\textwidth=9.55in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+\hfuzz=20pt
+\overfullrule=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\pagestyle{empty}
+
+ \sffamily
+ 
+\bcenter
+{\large \bf Homework 5 - The Perceptron } \medskip
+\ecenter
+
+\vskip.25in
+\hrule\smallskip\hrule
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Recall from the notes that the Perceptron model has a single artificial neuron which can have multiple inputs but with a single binary output.  Suppose that we are interested in training the algorithm to determine if a point $(x,y)$ lies  above or below  the $x$-axis.  Assume that each input  $(x,y)$ has a corresponding weight $w_x$, $w_y$ which satisfies $-1 \le w_x, w_y \le 1$.  
+%%%%%
+\benum
+%%%%%
+\item What do you think the exact values for the weights should be? (Hint: Should both weights play a role in the final solution?)
+\item  For the algorithm we assume that the output is -1 if the point is below the $x$-axis and +1 if it is on or above the $x$-axis.  We set the  threshold to be 0 and calculate $t=xw_x + y w_y$ and check it against the threshold; for simplicity we ignore the bias here. We calculate the signed error as actual value - predicted value. For the learning rate use 0.01.  For starting weights take $w_x = .2$ and $w_y = -.1$.  Use the training set
+$$ \{\: (1, -1), \;(1, 2 ),\; (.5,-2), \;(0,3)\; \} $$
+Compute one iteration of the algorithm using the data above; output your results  in a table like the one below.   I have completed the table for the first point in the dataset so you can see what we are asking for. 
+\bcenter
+\begin{tabular} { || l | c | c| c| c | c |  c|| }
+\hline \hline
+Point &  Actual &t &  Predicted & Error  & $w_x$ & $w_y$\cr\hline &&&&&&\cr
+(1,-1) & -1  &$(1)(.2) + (-1)(-.1) >0 $&  1 & -2 & .2-2( 1)(.01)=.18 & -.1-2(-1)(.01) = -.08  \cr  \hline \hline
+\end{tabular}
+\ecenter
+
+ %%%%%
+\eenum
+%%%%%
+%
+ %
+%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%
+  \bigskip\hrule\smallskip\hrule
+\bigskip
+
+ 
+
+\end{document}
+

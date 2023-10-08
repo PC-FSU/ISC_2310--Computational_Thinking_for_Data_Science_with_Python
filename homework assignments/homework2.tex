@@ -1,0 +1,95 @@
+\documentclass{article}
+
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[landscape]{geometry}
+\usepackage{graphicx}
+\usepackage{ pstricks,pst-grad  }
+\usepackage{wrapfig}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+ 
+\usepackage{color}
+\usepackage{epstopdf}
+\usepackage{framed}
+ 
+
+ %  TikZ & PGF Libraries
+\usepackage{tikz}
+\usepackage{animate}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.pathmorphing,patterns}
+\usepackage{calc}
+
+
+ \input  {macros_1057.tex}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\textheight=6.5in
+\textwidth=9.55in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+\hfuzz=20pt
+\overfullrule=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\pagestyle{empty}
+
+ \sffamily
+ 
+\bcenter
+{\large \bf Homework 2 - Random Processes } \medskip
+\ecenter
+
+\vskip.25in
+\hrule\smallskip\hrule
+\medskip
+
+\benum
+\item Calculate the following probabilities.   {\red Justify your answers}
+\benum
+\item  Suppose you flip a fair coin 3 times.  What is the probability of heads coming up exactly two times?
+\item Suppose you roll two fair 6-sided dice and sum the numbers that appear.  What is the probability of the sum being  9?
+\item Suppose you roll two fair 6-sided dice and sum the numbers that appear.  What is the probability of the sum being less than 6?
+\item  Suppose you roll two fair 8-sided dice and sum the numbers that appear.  What is the probability of the sum being exactly 2?
+\item Suppose you roll two fair 6-sided dice and sum the numbers that appear.  What is the probability of the \textbf{complement} of the sum being greater than 10?
+\eenum
+
+\medskip \hrule \medskip
+
+
+\item Calculate the expected value  for  the  following game and give the probability of each outcome occurring. Determine whether the house or the player has the advantage.  
+{\red Justify your answers}
+ \begin{quote}
+In this game the player is asked to roll two 6-sided dice and sum the numbers appearing. It costs \$3 to play the game.  If the sum is a 6, 7 or 8 the player gets \$3 and the cost to play the game is returned (that is, the payoff is \$6).  If the sum is 12 the player gets \$10 and the cost to play is returned.  Otherwise the player loses the \$3 it cost to play.
+\end{quote}
+ 
+
+\medskip \hrule \medskip
+
+\item  Calculate the following statistical measures for the exam scores given  below; the data   has a mean of 80.75.  You can check your answers using Python (or your scientific calculator) but the formulas  for each must be written down.  {\red Justify your answers}
+$$ 84, 72, 98, 88, 76, 71, 81, 76$$
+\benum 
+\item Determine the median of the data. 
+\item Determine the variance of the data.  Note:  use the formula for data variance, that is divide by the number of data points minus one. 
+\item Determine the standard deviation for the data.
+
+\eenum
+
+\eenum
+ \bigskip\hrule\smallskip\hrule
+\bigskip
+
+ 
+
+\end{document}
+
